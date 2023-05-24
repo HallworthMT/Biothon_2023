@@ -3,30 +3,24 @@
 <head>
 <meta charset="utf-8"/> <!-- resolve 'character encoding' error -->
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-
-<!-- Make sure you put this AFTER Leaflet's CSS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-crossorigin=""></script>
-
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/custom.css" rel="styesheet">
-
+<script src="js/jquery.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/moment.min.js"></script>
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
-<!-- load histogram plots -->
+<!-- load js modules -->
 <script type='module' src="js/biothon_last_update.js"></script>
 <script type='module' src="js/biothon_species_tracker.js"></script>
 <script type='module' src="js/biothon_taxon_breakdown.js"></script>
 <script type='module' src="js/biothon_count_tracker_static.js"></script>
 <script type='module' src="js/biothon_most_obs_spp.js"></script>
 
-<!--<script type='module' src="js/iNat_api_calls.js"></script> -->
-<!-- <script type="module" src="js/trial.js"></script> -->
 <!-- Create a div where the graph will take place -->
 <style>
 .activeTOOL {                                                        /* NEW */
@@ -47,13 +41,13 @@ crossorigin=""></script>
 
 </head>
 <body>
+
 <div class="row" style="display: block; margin: auto; text-align: center;">
 <img src="img/Biothon_banner.jpg" style="width: 50%; align-content: center;">
 </div>
+<p id="lastupload" style = "margin: auto; text-align: center; font-family: Roboto, sans-serif; color: #333; font-weight: 300; font-size: 12px; line-height: 1.5em;""></p>
 
-<p id="lastupload" style="text-align:center; font-family: Roboto, sans-serif; color: #333; font-weight: 300; font-size: 12px; line-height: 1.5em;"></p>
-
-<div class="row">
+<div class="row" style = "margin: auto; width: 60%">
   <div class="col-xs-12 col-lg-6">
     <div id="obsDoughnut"></div>
   </div>
@@ -63,9 +57,9 @@ crossorigin=""></script>
 </div> <!-- End of 2nd Row -->
 
 <h3 style="text-align: center"> Green Mountain Goatsuckers Goal Tracker </h3>
-<p style="font-family: Roboto, sans-serif; color: #333; font-weight: 300; font-size: 20px; line-height: 1.5em;"> We're aiming for 200 winged species in a 24 hour period. The gray bar below represents the number of winged species found in Vermont since May 1, when we started the <i>Wings Over Vermont</i> project. 
+<p style="width: 60%; margin: auto; font-family: Roboto, sans-serif; color: #333; font-weight: 300; font-size: 20px; line-height: 1.5em;"> We're aiming for 200 winged species in a 24 hour period. The gray bar below represents the number of winged species found in Vermont since May 1, when we started the <i>Wings Over Vermont</i> project. 
   The Green Mountain Goatsuckers 24 hour winged-species total is shown green. Cheer us on, follow our progress and support our campain as we <i>fly</i> towards 200 species.</p>
-
+<br>
 <a href="https://donatenow.networkforgood.org/1425440?code=2023%20Biothon" target="_blank" rel="noopener">
   <img decoding="async" loading="lazy" style="display: block; margin: auto; text-align: center" src="https://vtecostudies.org/wp-content/uploads/2020/04/Donate-Now-button-new-logo-390x99.jpg" alt="" srcset="https://vtecostudies.org/wp-content/uploads/2020/04/Donate-Now-button-new-logo-390x100.jpg 390w, https://vtecostudies.org/wp-content/uploads/2020/04/Donate-Now-button-new-logo.jpg 392w" sizes="(max-width: 201px) 100vw, 201px" width="201" height="51">
 </a>
@@ -78,7 +72,6 @@ crossorigin=""></script>
 
 
 </div> <!-- End container -->
-</div> <!-- End jumbotron -->
 
 </body>
 
